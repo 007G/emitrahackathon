@@ -1,8 +1,15 @@
-﻿<!DOCTYPE HTML>
+<?php
+session_start();
+if(!isset($_SESSION['username'])){
+    header('location:indexx.php');
+}
+?>
 
 <html>
-	<head>
-		<title>EMITRA</title>
+<head>
+<title>PHP Login & Register</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -15,8 +22,17 @@
 		left: 0; } 
 		.fish { position: relative; top: 0px; left: -90px; } 
 		</style>
-	</head>
-	<body>
+</head>
+<body>
+    <div class="container">
+        <a href="logout.php">Logout</a>
+        <div style="width: 500px; margin: 50px auto;">
+           <h3>Welcome <?php echo $_SESSION['username']; ?></h3
+        ></div>
+    </div>
+   
+
+	
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -28,7 +44,14 @@
 
 					<!-- Nav -->
 						<nav id="nav">
-							<ul>
+							<ul>  
+                                  <div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
+        
 								<li class="current"><a href="index.html">Home</a></li>
 								<li>
 									<a href="about.html">About us</a>
@@ -36,7 +59,7 @@
 								</li>
 								<li><a href="contact.html">Contact</a></li>
 								<li><a href="service.html">Service Rate List</a></li>
-								
+							
 								<li><a href="download.html">Download</a></li>
                                 <li><a href="log.html">Login</a></li>
                                 <li><a href="reg.html">Register</a></li>
@@ -46,93 +69,39 @@
 
 				</div>
 
-			<!-- Main -->
-			<div class="master-container">
-				
-					<div class="container">
-					<p>  </p>
-	
-	<p><u><b>Project Office</b>:</u></p>
+			<!-- Banner -->
+                   
+				<section id="banner">
+				<div id="bottom"><img src="usepics/cm.png" /></div>
+					<header>
+						<h1>News: <em>discom lottery scheme for online bill payment also apply on emitra ,state portal and emitra app </em></h1>
+						
+					</header>
+				</section>
 
-<p>Room No 305,</p>
+			<!-- slider -->
+			<div><br>
+<marquee behavior="slider"  dir="ltr" align="absbottom" onmouseover="this.stop();" onmouseout="this.start();">
+<img src="usepics/a11.jpg" width="100" height="70"/>
+<img src="usepics/a12.jpg" width="100" height="70"/>
+<img src="usepics/a13.jpg" width="100" height="70"/>
+<img src="usepics/a14.jpg" width="100" height="70"/>
+<img src="usepics/a15.jpg" width="100" height="70"/>
+<img src="usepics/a16.jpg" width="100" height="70"/>
+<img src="usepics/a17.jpg" width="100" height="70"/>
 
-<p>Department of Information Technology &amp; Communication (DoIT&amp;C)</p>
-
-<p>IT Building, Yojana Bhawan, Tilak Marg, C-Scheme</p>
-
-<p>Jaipur-302005 (Raj), INDIA</p>
-
-<p>Phone: 91(141) 5113544</p>
-
-<p>Fax: 91(141) 2222011</p>
-
-
-
-<p><u><b>Technical Office</b>:</u></p>
-
-<p>Basement,</p>
-
-<p>Sheel Mohar Plaza, </p>
-
-<p>Opp Yojana Bhawan, Tilak Marg, C-Scheme</p>
-
-<p>Jaipur-302005 (Raj), INDIA</p>
-
-<p>Phone: 91(141) 2221424</p>
-
-<p>Fax: 91(141) 2222011</p>
-
-
-
-<p><b><u>eMitra Helpdesk:</u></b></p>
-
-<p>+91-141-2221424<br />
-+91-141-2221425</p>
-
-<p><b>Email:</b></p>
-
-<p>service.emitra@rajasthan.gov.in</p>
-
-<p>helpdesk.emitra@rajasthan.gov.in</p>
-
-<p>utility.emitra@rajasthan.gov.in</p>
-
-<p>fundmanager.emitra@rajasthan.gov.in</p>
-
-
-
-<p><b><u>CCC (Citizen Contact Center)</u>:</b></p>
-
-<p>1800 180 6127 (Toll Free)</p>
-
-<p>Email : <a href="mailto:ccc.emitra@gmail.com">ccc.emitra@gmail.com</a></p>
-
-
-<p><b><u>Please click on Below Links for Contact:</u></b></p>
-
-<ul>
-<li><b><a href="/content/emitra/en/contact/eMitra_LSP.html" target="_blank" adhocenable="false">Local Service Providers </a></b></li>
-<li><b><a href="/content/emitra/en/contact/eMitra_Team.html" target="_blank" adhocenable="false">Technical Support Team</a></b></li>
-<li><b><a href="/content/emitra/en/contact/DistrictNodalOfficer.html#parsys_text" target="_blank" adhocenable="false">District Nodal Officer</a></b></li>
-</ul>
-
-
-<style>
-table, th, td {
-    border: 1px solid black;
-}
-
-</style>
-
- 
-
-
-					</div>
-				
-				</div>
+<img src="usepics/a18.jpg" width="100" height="70"/>
+ <img src="usepics/a19.jpg" width="100" height="70"/>
+<img src="usepics/a20.jpg" width="100" height="70"/>
+ <img src="usepics/a21.jpg" width="100" height="70"/>
+  <img src="usepics/a22.jpg" width="100" height="70"/>
+   <img src="usepics/a23.png" width="100" height="70"/>
+    <img src="usepics/a24.JPG" width="100" height="70"/>
+</marquee>
+</div>
 
 			<!-- Footer -->
-			<div id="footer">
+				<div id="footer">
 					
 
 					<!-- Icons -->
@@ -144,12 +113,11 @@ table, th, td {
 							<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
 						</ul>
 
+					<!-- Copyright -->
 
 <script id="cid0020000163142087036" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 200px;height: 300px;">{"handle":"e-mitra","arch":"js","styles":{"a":"0084ef","b":100,"c":"FFFFFF","d":"FFFFFF","k":"0084ef","l":"0084ef","m":"0084ef","n":"FFFFFF","p":"10","q":"0084ef","r":100,"pos":"br","cv":1,"cvbg":"CC0000","cvw":200,"cvh":30,"cnrs":"0.35","ticker":1,"fwtickm":1}}</script>
 
 
-
-					<!-- Copyright -->
 						<div class="copyright">
 							<ul class="menu">
 								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="#">ALLSTARS</a></li>
